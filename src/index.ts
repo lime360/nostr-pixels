@@ -45,7 +45,7 @@ con.onmessage = async (event) => {
   const message = JSON.parse(event.data as any);
   if (message[0] === "EVENT") {
     const event = message[2];
-    if (event.kind === 2763 || event.kind === 1) {
+    if (event.kind === 2763) {
       console.log(event);
       insertEvent(event);
     }
