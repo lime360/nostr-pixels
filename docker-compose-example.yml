@@ -1,0 +1,13 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+      DATABASE_NAME:
+      RELAY_URL:
+      PUBLIC_URL:
+      PORT:
+    ports:
+      - 3000:3000
