@@ -2,8 +2,8 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const pixelColor = document.getElementById("pixel_color");
 const secretMessage = document.getElementById("secret_message");
+const relay = document.getElementById("relay").value;
 const pixelSize = 5;
-const relay = "wss://relay.damus.io";
 const con = new WebSocket(relay);
 let pixels = [];
 
