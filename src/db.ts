@@ -18,6 +18,6 @@ export function init() {
 export function insertEvent(evt: any) {
   const db = new Database(`${DATABASE_NAME}.db`);
   const stmt = db.prepare("INSERT INTO events (edata) VALUES (?)");
-  const info = stmt.run(JSON.stringify(evt));
+  stmt.run(JSON.stringify(evt));
   db.close();
 }
